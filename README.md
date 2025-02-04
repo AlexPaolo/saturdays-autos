@@ -38,9 +38,15 @@ python app.py
 ## Ejemplo de Solicitud
 Puedes enviar una solicitud POST a la API para obtener una predicción de la tarifa del taxi. Aquí hay un ejemplo usando curl:
 
-```bash
-curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: application/json" -d '[{"trip_distance": 3.5, "trip_duration": 15, "PULocationID": 1, "DOLocationID": 2}]'
-
+    ```bash
+    curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: application/json" -d '[{"trip_distance": 3.5, "trip_duration": 15, "PULocationID": 1, "DOLocationID": 2}]'
+    ```
+La respuesta será un JSON con la predicción de la tarifa:
+    ```bash
+    {
+    "prediction": [12.34]
+    }
+    ```
 
 ## Créditos
 Este proyecto fue creado en el curso de Saturdays AI Quito.
